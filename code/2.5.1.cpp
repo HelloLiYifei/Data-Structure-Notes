@@ -157,6 +157,14 @@ void CreateList_R(LinkList &L, int n) {
     }
 }
 
+LinkList Connect(LinkList Ta, LinkList Tb) {//假设Ta,Tb都是非空的单循环链表
+    Lnode *p = Ta->next;        
+    Ta->next = Tb->next->next;  //1o存表头结点
+    delete Tb->next;            //2Tb表头连接Ta表尾
+    Tb->next = p;               //3释放Tb表头结点
+    return Tb;                  //4修改指针
+}
+
 int main(void) {
 
 }
