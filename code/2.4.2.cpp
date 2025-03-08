@@ -50,7 +50,7 @@ void ClearList(SqList &L) {
 int GetLength(SqList L) {
     return L.length; // 返回L中元素的个数
 }
-
+链表头部
 int IsEmpty(SqList L) {
     if(L.length == 0) return 1;
     else return 0;   
